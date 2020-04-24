@@ -8,4 +8,5 @@
 
 import Foundation
 
-let BASE_URL = "https://pokeapi.co/api/v2/"
+let BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
+let POKEMON_IMAGE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
