@@ -16,10 +16,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var orderLabel: UILabel!
     
     let pokemonApi = PokemonAPI()
+    var skills: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         generateNewPokemon()
     }
     
@@ -32,7 +32,7 @@ class HomeVC: UIViewController {
                     self.nameLabel.text = pokemon?.name
                     self.weightLabel.text = "\(pokemon?.weight ?? 0)"
                     self.orderLabel.text = "\(pokemon?.order ?? 0)"
-                    print(pokemon?.pokemonMoves[0])
+                    self.skills = pokemon!.pokemonMoves
                 }
             }
         }
@@ -40,11 +40,19 @@ class HomeVC: UIViewController {
 
 
     @IBAction func skillsButtonPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier: "toSkillsVC", sender: self)
     }
     
     @IBAction func generatePokemon(_ sender: Any) {
         generateNewPokemon()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillsVC = segue.destination as? SkillsVC {
+            skillsVC.img = pokemonImg.image
+            skillsVC.name = nameLabel.text
+            skillsVC.skills = skills
+        }
     }
     
 }

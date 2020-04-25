@@ -18,6 +18,7 @@
 		A913ABD524539B3000079574 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A913ABD324539B3000079574 /* Pokemon Solid.ttf */; };
 		A913ABD824539F6800079574 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913ABD724539F6800079574 /* PokemonAPI.swift */; };
 		A913ABDA2453A0D500079574 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913ABD92453A0D500079574 /* Pokemon.swift */; };
+		A913ABDC2454452000079574 /* SkillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913ABDB2454451F00079574 /* SkillsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A913ABD324539B3000079574 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		A913ABD724539F6800079574 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		A913ABD92453A0D500079574 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		A913ABDB2454451F00079574 /* SkillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A913ABB8245395E600079574 /* HomeVC.swift */,
+				A913ABDB2454451F00079574 /* SkillsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A913ABDC2454452000079574 /* SkillsVC.swift in Sources */,
 				A913ABDA2453A0D500079574 /* Pokemon.swift in Sources */,
 				A913ABB9245395E600079574 /* HomeVC.swift in Sources */,
 				A913ABB5245395E600079574 /* AppDelegate.swift in Sources */,

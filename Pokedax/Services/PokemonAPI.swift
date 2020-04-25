@@ -61,8 +61,31 @@ class PokemonAPI {
         let id = json["id"] as? Int ?? 0
         let order = json["order"] as? Int ?? 0
         // Error line below, not parsing data well
-        let moves = json["moves"] as? [String] ?? [String]()
+        let moves = parseMoves(json: json)
         
         return Pokemon(name: name, order: order, weight: weight, pokemonMoves: moves, pokemonID: id)
     }
+    
+    func parseMoves(json: [String : Any]) -> [String] {
+        // need to check if less than 3 skills
+        var skills = [String]()
+        if let moves = json["moves"] as? [[String : Any]] {
+            if moves.count > 5 {
+                for i in 0...4 {
+                    let skill = moves[i]["move"]! as? [String : String]
+                    let moveName = skill!["name"]
+                    skills.append(moveName!)
+                }
+            } else {
+                for move in moves {
+                    let skill = move["move"]! as? [String : String]
+                    let moveName = skill!["name"]
+                    skills.append(moveName!)
+                }
+            }
+        }
+        return skills
+    }
 }
+
+
